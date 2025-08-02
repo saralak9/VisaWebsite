@@ -204,22 +204,17 @@ class APITester:
                 "email": "sarah.johnson@example.com",
                 "phone": "+1-555-0123",
                 "citizenship": "United States",
-                "dateOfBirth": "1990-05-15",
                 "placeOfBirth": "New York, NY",
                 "gender": "Female"
             },
             "travelDetails": {
                 "purpose": "Tourism",
-                "arrivalDate": "2024-06-01",
-                "departureDate": "2024-06-30",
                 "duration": 30,
                 "accommodation": "Hotel Booking Confirmed",
                 "previousVisits": False
             },
             "passportInfo": {
                 "number": "123456789",
-                "issueDate": "2020-01-01",
-                "expiryDate": "2030-01-01",
                 "issuingCountry": "United States"
             }
         }
