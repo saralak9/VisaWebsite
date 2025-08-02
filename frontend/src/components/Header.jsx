@@ -64,8 +64,8 @@ const Header = () => {
             {/* Right Side Navigation */}
             <div className="flex items-center space-x-4">
               {/* On Time Guaranteed Badge */}
-              <div className="hidden lg:flex items-center space-x-1 bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <div className="hidden lg:flex items-center space-x-1 kpvs-badge-success">
+                <div className="w-2 h-2 kpvs-bg-success rounded-full"></div>
                 <span>On Time Guaranteed</span>
               </div>
 
