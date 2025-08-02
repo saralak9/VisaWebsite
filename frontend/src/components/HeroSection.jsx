@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Card } from './ui/card';
-
 import { mockUSAImages, mockReviews } from '../data/mock';
 import { Star, Smartphone, Download, AlertCircle, X } from 'lucide-react';
 
