@@ -90,45 +90,23 @@ const Header = () => {
 
               {/* Country Selector */}
               <div className="hidden md:block">
-                <Select defaultValue="us">
+                <Select defaultValue={SUPPORTED_COUNTRIES[0]?.code}>
                   <SelectTrigger className="w-[60px] border-none shadow-none">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    {/* Current supported country - USA only */}
-                    <SelectItem value="us">
-                      <div className="flex items-center space-x-2">
-                        <img 
-                          src="https://media.atlys.com/image/upload/country_flags/us.svg" 
-                          alt="US" 
-                          className="w-4 h-4"
-                        />
-                        <span>US</span>
-                      </div>
-                    </SelectItem>
-                    
-                    {/* TODO: Add more countries here as business expands
-                    <SelectItem value="in">
-                      <div className="flex items-center space-x-2">
-                        <img 
-                          src="https://media.atlys.com/image/upload/country_flags/in.svg" 
-                          alt="India" 
-                          className="w-4 h-4"
-                        />
-                        <span>IN</span>
-                      </div>
-                    </SelectItem>
-                    <SelectItem value="ca">
-                      <div className="flex items-center space-x-2">
-                        <img 
-                          src="https://media.atlys.com/image/upload/country_flags/ca.svg" 
-                          alt="Canada" 
-                          className="w-4 h-4"
-                        />
-                        <span>CA</span>
-                      </div>
-                    </SelectItem>
-                    */}
+                    {SUPPORTED_COUNTRIES.map((country) => (
+                      <SelectItem key={country.code} value={country.code}>
+                        <div className="flex items-center space-x-2">
+                          <img 
+                            src={country.flag}
+                            alt={country.fullName}
+                            className="w-4 h-4"
+                          />
+                          <span>{country.name}</span>
+                        </div>
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </div>
