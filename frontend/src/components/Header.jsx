@@ -130,22 +130,22 @@ const Header = () => {
               {/* Mobile Menu */}
               <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
                 <SheetTrigger asChild className="md:hidden">
-                  <Button variant="ghost" size="sm" className="p-2">
-                    <Menu className="h-5 w-5 text-gray-600" />
+                  <Button variant="ghost" size="sm" className="p-2 kpvs-hover-blue-50 rounded-lg transition-colors">
+                    <Menu className="h-5 w-5 kpvs-text-gray-700" />
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <SheetContent side="right" className="w-[300px] sm:w-[400px] kpvs-bg-gray-50">
                   <div className="flex flex-col space-y-4 mt-6">
                     <div className="relative">
-                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 kpvs-text-gray-600 h-4 w-4" />
                       <Input
                         type="text"
                         placeholder="Search countries"
-                        className="pl-10 pr-4 py-2 w-full"
+                        className="pl-10 pr-4 py-2 w-full kpvs-focus border-2 kpvs-border-gray-300 rounded-lg"
                       />
                     </div>
-                    <div className="flex items-center space-x-1 bg-green-100 text-green-700 px-3 py-2 rounded-full text-sm font-medium justify-center">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="flex items-center space-x-1 kpvs-badge-success justify-center">
+                      <div className="w-2 h-2 kpvs-bg-success rounded-full"></div>
                       <span>On Time Guaranteed</span>
                     </div>
                   </div>
