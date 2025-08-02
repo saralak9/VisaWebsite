@@ -72,6 +72,7 @@ const Header = () => {
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
+                    {/* Current supported country - USA only */}
                     <SelectItem value="us">
                       <div className="flex items-center space-x-2">
                         <img 
@@ -82,6 +83,8 @@ const Header = () => {
                         <span>US</span>
                       </div>
                     </SelectItem>
+                    
+                    {/* TODO: Add more countries here as business expands
                     <SelectItem value="in">
                       <div className="flex items-center space-x-2">
                         <img 
@@ -92,6 +95,17 @@ const Header = () => {
                         <span>IN</span>
                       </div>
                     </SelectItem>
+                    <SelectItem value="ca">
+                      <div className="flex items-center space-x-2">
+                        <img 
+                          src="https://media.atlys.com/image/upload/country_flags/ca.svg" 
+                          alt="Canada" 
+                          className="w-4 h-4"
+                        />
+                        <span>CA</span>
+                      </div>
+                    </SelectItem>
+                    */}
                   </SelectContent>
                 </Select>
               </div>
