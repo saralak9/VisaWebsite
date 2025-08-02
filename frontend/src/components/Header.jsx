@@ -33,12 +33,12 @@ const Header = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              {/* KPVS Logo */}
+              {/* KPVS Bold Logo */}
               <div className="flex items-center">
                 <img 
-                  src="https://customer-assets.emergentagent.com/job_visa-usa-journey/artifacts/mujpczy6_image-2-removebg.png" 
+                  src="https://customer-assets.emergentagent.com/job_visa-usa-journey/artifacts/m5nl3hc5_image-2-removebg%20copy.png" 
                   alt="KPVS - Anytime, Anywhere" 
-                  className="h-10 w-auto"
+                  className="h-8 w-auto"
                 />
               </div>
             </div>
