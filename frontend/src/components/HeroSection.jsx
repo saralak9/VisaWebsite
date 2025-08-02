@@ -130,10 +130,10 @@ const HeroSection = () => {
             </div>
 
             {/* Key Features */}
-            <div className="flex justify-center mb-8">
-              <div className="bg-white/50 backdrop-blur-sm rounded-lg px-4 py-2 border kpvs-border-gray-200">
+            <div className="flex justify-center mb-6">
+              <div className="kpvs-card p-5 hover:kpvs-shadow-md transition-all">
                 <div className="text-center">
-                  <div className="text-xs font-normal kpvs-text-gray-500">Appointment Availability: 2 Weeks</div>
+                  <div className="text-lg font-semibold kpvs-text-gray-700">Appointment Availability: 2 Weeks</div>
                 </div>
               </div>
             </div>
@@ -142,9 +142,9 @@ const HeroSection = () => {
             <div className="flex justify-center">
               <Button 
                 size="lg" 
-                className="kpvs-btn-primary px-16 py-6 text-2xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border-4 border-white/20"
+                className="kpvs-btn-primary px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
               >
-                <span className="relative tracking-wide">Start Your Application</span>
+                <span className="relative">Start Your Application</span>
               </Button>
             </div>
           </div>
