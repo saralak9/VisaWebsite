@@ -49,17 +49,41 @@ const HeroSection = () => {
 
   return (
     <div className="relative min-h-[90vh] bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* App Promotion Banner */}
-      <div className="bg-blue-600 text-white py-3 px-4 text-center">
-        <div className="flex items-center justify-center space-x-2 text-sm">
-          <Smartphone className="h-4 w-4" />
-          <span>Works best on the app</span>
-          <span className="font-semibold">The fastest, easiest way to a visa</span>
-          <Button variant="outline" size="sm" className="ml-4 bg-white text-blue-600 hover:bg-gray-100">
-            Use App
-          </Button>
+      {/* Important Updates Banner */}
+      {showBanner && (
+        <div className={`${getBannerColors(importantUpdate.type)} py-3 px-4 text-center relative`}>
+          <div className="flex items-center justify-center space-x-2 text-sm">
+            {getBannerIcon(importantUpdate.type)}
+            <span>{importantUpdate.message}</span>
+            <span className="font-semibold hidden sm:inline">{importantUpdate.details}</span>
+            {importantUpdate.actionText && (
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="ml-4 bg-white text-blue-600 hover:bg-gray-100"
+                onClick={() => {
+                  if (importantUpdate.actionUrl.startsWith('#')) {
+                    document.querySelector(importantUpdate.actionUrl)?.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.open(importantUpdate.actionUrl, '_blank');
+                  }
+                }}
+              >
+                {importantUpdate.actionText}
+              </Button>
+            )}
+            {importantUpdate.dismissible && (
+              <button
+                onClick={() => setShowBanner(false)}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-200"
+                aria-label="Close banner"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
