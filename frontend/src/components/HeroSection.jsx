@@ -159,7 +159,7 @@ const HeroSection = () => {
                 USA Visa from USA
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Get your US visa hassle-free with Atlys. We offer quick processing, 
+                Get your US visa hassle-free with KPVS. We offer quick processing, 
                 expert assistance, and guaranteed on-time delivery for American Citizens.
               </p>
             </div>
