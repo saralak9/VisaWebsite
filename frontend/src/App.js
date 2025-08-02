@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./contexts/AuthContext";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import VisaApplication from "./components/VisaApplication";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import CitizenshipModal from "./components/CitizenshipModal";
-import { mockCountries } from "./data/mock";
+import { Toaster } from "./components/ui/toaster";
 
 const HomePage = () => {
   const [isCitizenshipModalOpen, setIsCitizenshipModalOpen] = useState(false);
-  const [selectedCitizenship, setSelectedCitizenship] = useState(
-    mockCountries.find(country => country.code === 'US') || mockCountries[0]
-  );
+  const [selectedCitizenship, setSelectedCitizenship] = useState({
+    code: 'US',
+    name: 'United States',
+    flag: 'https://media.atlys.com/image/upload/country_flags/us.svg'
+  });
 
   const handleCitizenshipSelect = (country) => {
     setSelectedCitizenship(country);
@@ -42,12 +45,15 @@ const HomePage = () => {
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+          <Footer />
+          <Toaster />
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
