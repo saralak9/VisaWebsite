@@ -519,18 +519,19 @@ const VisaApplication = () => {
                 )}
 
                 {/* Navigation Buttons */}
-                <div className="flex justify-between pt-6 border-t">
+                <div className="flex justify-between pt-6 border-t kpvs-border-gray-200">
                   <Button
                     variant="outline"
                     onClick={prevStep}
                     disabled={currentStep === 1 || loading}
+                    className="kpvs-btn-secondary"
                   >
                     Previous
                   </Button>
                   <Button
                     onClick={nextStep}
                     disabled={currentStep === mockApplicationSteps.length || loading}
-                    className="bg-kpvs-blue hover:bg-kpvs-blue-dark"
+                    className="kpvs-btn-primary"
                   >
                     {loading ? (
                       <>
@@ -544,8 +545,8 @@ const VisaApplication = () => {
                     )}
                   </Button>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </div>
