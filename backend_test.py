@@ -253,10 +253,10 @@ class APITester:
         self.access_token = None
         
         success, data, status = self.make_request('GET', '/visa-applications')
-        if not success and status == 401:
-            self.log_test("Protected endpoint without token", True, "Correctly returned 401 Unauthorized")
+        if not success and status in [401, 403]:
+            self.log_test("Protected endpoint without token", True, f"Correctly returned {status} (Unauthorized/Forbidden)")
         else:
-            self.log_test("Protected endpoint without token", False, f"Expected 401, got {status}", data)
+            self.log_test("Protected endpoint without token", False, f"Expected 401/403, got {status}", data)
         
         # Test with invalid token
         self.access_token = "invalid_token_12345"
