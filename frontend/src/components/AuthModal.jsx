@@ -91,9 +91,16 @@ const AuthModal = ({ isOpen, onClose }) => {
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-center text-2xl font-bold">
-            Welcome to KPVS
-          </DialogTitle>
+          <div className="text-center">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_visa-usa-journey/artifacts/mujpczy6_image-2-removebg.png" 
+              alt="KPVS - Anytime, Anywhere" 
+              className="h-12 w-auto mx-auto mb-4"
+            />
+            <DialogTitle className="text-2xl font-bold">
+              Welcome to KPVS
+            </DialogTitle>
+          </div>
         </DialogHeader>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
