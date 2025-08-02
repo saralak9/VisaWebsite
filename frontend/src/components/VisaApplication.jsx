@@ -235,7 +235,7 @@ const VisaApplication = () => {
                       <div
                         className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
                           currentStep === step.step
-                            ? 'bg-blue-500 text-white'
+                            ? 'bg-kpvs-blue text-white'
                             : currentStep > step.step
                             ? 'bg-green-500 text-white'
                             : 'bg-gray-300 text-gray-600'
