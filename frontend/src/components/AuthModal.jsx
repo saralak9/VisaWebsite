@@ -26,8 +26,7 @@ const AuthModal = ({ isOpen, onClose }) => {
     fullName: '',
     email: '',
     password: '',
-    phone: '',
-    citizenship: 'US'
+    phone: ''
   });
 
   const resetForms = () => {
