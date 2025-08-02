@@ -276,3 +276,5 @@ test_plan:
 agent_communication:
     - agent: "testing"
       message: "Backend API testing completed successfully. All 14 test cases passed (100% success rate). Fixed two critical issues: 1) FAQs API missing datetime fields in seeded data, 2) Visa applications BSON serialization error with date objects. All core functionality working: health checks, countries API, FAQs with search, authentication (register/login), visa applications CRUD, and proper error handling for protected endpoints."
+    - agent: "testing"
+      message: "Starting comprehensive frontend testing for Atlys USA Visa application. Will test: 1) Homepage and navigation, 2) User authentication flow with registration/login, 3) FAQ section with search and filtering, 4) Country selection modal, 5) Multi-step visa application process, 6) Backend API integration. Frontend URL: http://localhost:3000, Backend URL: https://4d187325-79a1-44b4-b2e4-9b78c3784fdd.preview.emergentagent.com/api"
