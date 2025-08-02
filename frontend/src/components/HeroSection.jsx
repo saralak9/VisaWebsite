@@ -113,7 +113,7 @@ const HeroSection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-6 left-6 text-white">
-                <h1 className="text-4xl font-bold mb-2">USA Visa from USA</h1>
+                <h1 className="text-4xl font-bold mb-2">USA Visa Services</h1>
               </div>
             </div>
           </div>
