@@ -266,25 +266,31 @@ const VisaApplication = () => {
 
           {/* Application Form - Right Column */}
           <div className="lg:col-span-2">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
+            <div className="kpvs-card">
+              <div className="p-6 border-b kpvs-border-gray-200">
+                <h3 className="flex items-center space-x-2 text-lg font-semibold kpvs-text-gray-900">
                   {getStepIcon(mockApplicationSteps[currentStep - 1]?.icon)}
                   <span>{mockApplicationSteps[currentStep - 1]?.title}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
+                </h3>
+              </div>
+              <div className="p-6 space-y-6">
                 {/* Error and Success Messages */}
                 {error && (
-                  <Alert variant="destructive">
-                    <AlertDescription>{error}</AlertDescription>
-                  </Alert>
+                  <div className="kpvs-bg-error-light kpvs-border-error rounded-lg p-4">
+                    <div className="flex items-start space-x-3">
+                      <AlertCircle className="h-5 w-5 kpvs-text-error mt-0.5 flex-shrink-0" />
+                      <p className="text-sm kpvs-text-error-dark">{error}</p>
+                    </div>
+                  </div>
                 )}
                 
                 {success && (
-                  <Alert>
-                    <AlertDescription className="text-green-600">{success}</AlertDescription>
-                  </Alert>
+                  <div className="kpvs-bg-success-light kpvs-border-success rounded-lg p-4">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 kpvs-text-success mt-0.5 flex-shrink-0" />
+                      <p className="text-sm kpvs-text-success-dark">{success}</p>
+                    </div>
+                  </div>
                 )}
 
                 {/* Step 1: Visa Type Selection */}
