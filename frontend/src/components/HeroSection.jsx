@@ -7,6 +7,17 @@ import { Star, Smartphone, Download, AlertCircle, X } from 'lucide-react';
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showBanner, setShowBanner] = useState(true);
+
+  // Important updates configuration - easily editable
+  const importantUpdate = {
+    message: "🚨 Important: New visa requirements effective Feb 15, 2025",
+    details: "All applicants must now provide biometric data. Learn more about the new process.",
+    type: "warning", // "info", "warning", "success", or "error"
+    actionText: "Learn More",
+    actionUrl: "#faq", // or external URL
+    dismissible: true
+  };
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % mockUSAImages.length);
