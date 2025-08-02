@@ -4,14 +4,22 @@
   --kpvs-blue: #1a365d;
   --kpvs-blue-light: #2c5282;
   --kpvs-blue-dark: #0f2a44;
+  --kpvs-blue-darker: #0a1e30;
   --kpvs-blue-50: #f0f7ff;
   --kpvs-blue-100: #e0f2fe;
   --kpvs-blue-200: #bae6fd;
+  --kpvs-blue-300: #7dd3fc;
+  --kpvs-blue-400: #38bdf8;
   
   /* Secondary KPVS Colors */
   --kpvs-orange: #ed8936;
   --kpvs-orange-light: #f6ad55;
+  --kpvs-orange-dark: #c05621;
+  --kpvs-orange-50: #fff7ed;
+  --kpvs-orange-100: #ffedd5;
   --kpvs-red: #e53e3e;
+  --kpvs-red-light: #f87171;
+  --kpvs-red-dark: #dc2626;
   
   /* Professional Grays */
   --kpvs-gray-50: #f9fafb;
@@ -28,13 +36,39 @@
   /* Status Colors - Professional variants */
   --kpvs-success: #10b981;
   --kpvs-success-light: #34d399;
+  --kpvs-success-dark: #047857;
   --kpvs-success-bg: #ecfdf5;
+  --kpvs-success-border: #a7f3d0;
+  
   --kpvs-warning: #f59e0b;
   --kpvs-warning-light: #fbbf24;
+  --kpvs-warning-dark: #d97706;
   --kpvs-warning-bg: #fef3c7;
+  --kpvs-warning-border: #fde68a;
+  
   --kpvs-error: #ef4444;
   --kpvs-error-light: #f87171;
+  --kpvs-error-dark: #dc2626;
   --kpvs-error-bg: #fef2f2;
+  --kpvs-error-border: #fecaca;
+  
+  /* Professional Gradients */
+  --kpvs-gradient-primary: linear-gradient(135deg, var(--kpvs-blue) 0%, var(--kpvs-blue-light) 100%);
+  --kpvs-gradient-primary-hover: linear-gradient(135deg, var(--kpvs-blue-dark) 0%, var(--kpvs-blue) 100%);
+  --kpvs-gradient-accent: linear-gradient(135deg, var(--kpvs-orange) 0%, var(--kpvs-red) 100%);
+  --kpvs-gradient-subtle: linear-gradient(135deg, var(--kpvs-blue-50) 0%, var(--kpvs-orange-50) 100%);
+  
+  /* Interactive States */
+  --kpvs-hover-overlay: rgba(26, 54, 93, 0.1);
+  --kpvs-focus-ring: var(--kpvs-blue);
+  --kpvs-active-overlay: rgba(26, 54, 93, 0.2);
+  
+  /* Shadows - Professional depth */
+  --kpvs-shadow-sm: 0 1px 2px 0 rgba(26, 54, 93, 0.05);
+  --kpvs-shadow: 0 1px 3px 0 rgba(26, 54, 93, 0.1), 0 1px 2px 0 rgba(26, 54, 93, 0.06);
+  --kpvs-shadow-md: 0 4px 6px -1px rgba(26, 54, 93, 0.1), 0 2px 4px -1px rgba(26, 54, 93, 0.06);
+  --kpvs-shadow-lg: 0 10px 15px -3px rgba(26, 54, 93, 0.1), 0 4px 6px -2px rgba(26, 54, 93, 0.05);
+  --kpvs-shadow-xl: 0 20px 25px -5px rgba(26, 54, 93, 0.1), 0 10px 10px -5px rgba(26, 54, 93, 0.04);
 }
 
 /* KPVS Brand Utility Classes */
