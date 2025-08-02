@@ -21,8 +21,8 @@ const HeroSection = () => {
 
   const getBannerColors = (type) => {
     switch(type) {
-      case 'warning': return 'bg-gradient-to-r from-red-500 to-red-600 text-white';
-      case 'error': return 'bg-gradient-to-r from-red-600 to-red-700 text-white';
+      case 'warning': return 'bg-gradient-to-r from-orange-500 to-red-500 text-white';
+      case 'error': return 'bg-gradient-to-r from-red-500 to-red-600 text-white';
       case 'success': return 'bg-gradient-to-r from-green-600 to-green-700 text-white';
       case 'info': 
       default: return 'bg-gradient-to-r from-blue-600 to-blue-700 text-white';
