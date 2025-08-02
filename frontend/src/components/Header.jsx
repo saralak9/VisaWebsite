@@ -7,29 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from './ui/dropdown-menu';
 import { useAuth } from '../contexts/AuthContext';
 import AuthModal from './AuthModal';
-
-// Supported countries configuration - easily expandable
-const SUPPORTED_COUNTRIES = [
-  {
-    code: 'us',
-    name: 'US',
-    flag: 'https://media.atlys.com/image/upload/country_flags/us.svg',
-    fullName: 'United States'
-  }
-  // Future countries can be added here:
-  // {
-  //   code: 'in',
-  //   name: 'IN', 
-  //   flag: 'https://media.atlys.com/image/upload/country_flags/in.svg',
-  //   fullName: 'India'
-  // },
-  // {
-  //   code: 'ca',
-  //   name: 'CA',
-  //   flag: 'https://media.atlys.com/image/upload/country_flags/ca.svg', 
-  //   fullName: 'Canada'
-  // }
-];
+import { getActiveCountries } from '../config/countries';
 
 const Header = () => {
   const { user, isAuthenticated, logout } = useAuth();
