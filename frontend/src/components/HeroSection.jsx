@@ -187,12 +187,14 @@ const HeroSection = () => {
             <div className="space-y-4">
               <Button 
                 size="lg" 
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg"
+                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 text-lg relative overflow-hidden group"
               >
-                Start Your Application
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span className="relative">Start Your Application</span>
               </Button>
               <div className="text-center text-sm text-gray-500">
-                ✓ Expert visa assistance  ✓ Document verification  ✓ Interview preparation
+                ✓ Expert visa assistance  ✓ Document verification  ✓ Interview preparation  
+                <span className="text-red-500 font-semibold">✓ On-time guarantee</span>
               </div>
             </div>
 
