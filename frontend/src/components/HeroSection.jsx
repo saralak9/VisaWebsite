@@ -101,11 +101,15 @@ const HeroSection = () => {
           {/* Left Column - Images */}
           <div className="relative">
             {/* Main Image */}
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl mb-6">
+            <div 
+              className="relative overflow-hidden rounded-2xl shadow-2xl mb-6"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               <img
                 src={mockUSAImages[currentImageIndex]}
                 alt="USA Destination"
-                className="w-full h-[400px] object-cover transition-transform duration-500 hover:scale-105"
+                className="w-full h-[400px] object-cover transition-all duration-1000 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-6 left-6 text-white">
@@ -118,12 +122,20 @@ const HeroSection = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all ${
-                      index === currentImageIndex ? 'bg-white' : 'bg-white/50'
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/80'
                     }`}
+                    aria-label={`Go to image ${index + 1}`}
                   />
                 ))}
               </div>
+              
+              {/* Auto-scroll indicator */}
+              {!isHovered && (
+                <div className="absolute top-4 right-4 text-white/70 text-xs">
+                  Auto-scrolling
+                </div>
+              )}
             </div>
           </div>
 
