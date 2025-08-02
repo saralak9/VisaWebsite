@@ -43,7 +43,7 @@ logger = logging.getLogger(__name__)
 # Health check endpoint
 @api_router.get("/")
 async def root():
-    return {"message": "Atlys USA Visa API is running", "status": "healthy"}
+    return {"message": "KPVS USA Visa API is running", "status": "healthy"}
 
 @api_router.get("/health")
 async def health_check():
