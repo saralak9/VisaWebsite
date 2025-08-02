@@ -216,15 +216,18 @@ frontend:
 
   - task: "FAQ Section"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/components/FAQ.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "testing"
           comment: "Ready for testing - FAQ component with search, filtering, and accordion functionality"
+        - working: true
+          agent: "testing"
+          comment: "✅ PASSED - FAQ section loads 26+ FAQ items from backend API successfully. Search functionality works with 'Search FAQs...' input field. Category filtering available with 'All' and 'General Information' badges. Accordion expand/collapse functionality working. Backend integration confirmed with /api/faqs endpoint calls. All FAQ features operational."
 
   - task: "Country Selection Modal"
     implemented: true
