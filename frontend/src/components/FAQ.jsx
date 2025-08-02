@@ -1,25 +1,89 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from './ui/card';
 import { Input } from './ui/input';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
 import { Badge } from './ui/badge';
-import { Search, HelpCircle } from 'lucide-react';
-import { mockFAQs } from '../data/mock';
+import { Search, HelpCircle, Loader2 } from 'lucide-react';
+import { faqsAPI } from '../services/api';
 
 const FAQ = () => {
+  const [faqs, setFaqs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [searching, setSearching] = useState(false);
+  const [error, setError] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [categories, setCategories] = useState(['All']);
 
-  // Get unique categories
-  const categories = ['All', ...new Set(mockFAQs.map(faq => faq.category))];
+  // Load FAQs on component mount
+  useEffect(() => {
+    loadFAQs();
+  }, [selectedCategory]);
 
-  // Filter FAQs based on search and category
-  const filteredFAQs = mockFAQs.filter(faq => {
-    const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+  // Search with debounce
+  useEffect(() => {
+    const delayedSearch = setTimeout(() => {
+      if (searchQuery.trim()) {
+        searchFAQs();
+      } else if (!searchQuery.trim()) {
+        loadFAQs();
+      }
+    }, 500);
+
+    return () => clearTimeout(delayedSearch);
+  }, [searchQuery, selectedCategory]);
+
+  const loadFAQs = async () => {
+    try {
+      setLoading(true);
+      setError('');
+      
+      const response = await faqsAPI.getAll(selectedCategory === 'All' ? null : selectedCategory);
+      
+      if (response.data.success) {
+        setFaqs(response.data.data);
+        
+        // Extract unique categories
+        const uniqueCategories = ['All', ...new Set(response.data.data.map(faq => faq.category))];
+        setCategories(uniqueCategories);
+      } else {
+        setError('Failed to load FAQs');
+      }
+    } catch (err) {
+      console.error('Error loading FAQs:', err);
+      setError('Failed to load FAQs. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const searchFAQs = async () => {
+    try {
+      setSearching(true);
+      setError('');
+      
+      const response = await faqsAPI.search(
+        searchQuery,
+        selectedCategory === 'All' ? null : selectedCategory
+      );
+      
+      if (response.data.success) {
+        setFaqs(response.data.data);
+      } else {
+        setError('Search failed');
+      }
+    } catch (err) {
+      console.error('Error searching FAQs:', err);
+      setError('Search failed. Please try again.');
+    } finally {
+      setSearching(false);
+    }
+  };
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    setSearchQuery(''); // Clear search when category changes
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -39,12 +103,15 @@ const FAQ = () => {
             {/* Search */}
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              {searching && (
+                <Loader2 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4 animate-spin" />
+              )}
               <Input
                 type="text"
                 placeholder="Search FAQs..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-4 py-3 w-full"
+                className="pl-10 pr-10 py-3 w-full"
               />
             </div>
             
@@ -59,7 +126,7 @@ const FAQ = () => {
                       ? 'bg-blue-600 hover:bg-blue-700'
                       : 'hover:bg-gray-200'
                   }`}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => handleCategoryChange(category)}
                 >
                   {category}
                 </Badge>
@@ -69,12 +136,29 @@ const FAQ = () => {
         </CardContent>
       </Card>
 
-      {/* FAQ Accordion */}
-      {filteredFAQs.length > 0 ? (
+      {/* Error Display */}
+      {error && (
+        <Card className="mb-8 border-red-200 bg-red-50">
+          <CardContent className="p-4">
+            <p className="text-red-600 text-center">{error}</p>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Loading State */}
+      {loading ? (
+        <Card>
+          <CardContent className="p-12 text-center">
+            <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4 text-blue-600" />
+            <p className="text-gray-600">Loading FAQs...</p>
+          </CardContent>
+        </Card>
+      ) : faqs.length > 0 ? (
+        /* FAQ Accordion */
         <Card>
           <CardContent className="p-6">
             <Accordion type="single" collapsible className="space-y-4">
-              {filteredFAQs.map((faq) => (
+              {faqs.map((faq) => (
                 <AccordionItem
                   key={faq.id}
                   value={`item-${faq.id}`}
@@ -106,6 +190,7 @@ const FAQ = () => {
           </CardContent>
         </Card>
       ) : (
+        /* No Results */
         <Card>
           <CardContent className="p-12 text-center">
             <HelpCircle className="h-16 w-16 text-gray-300 mx-auto mb-4" />
@@ -113,7 +198,10 @@ const FAQ = () => {
               No FAQs found
             </h3>
             <p className="text-gray-600">
-              Try adjusting your search terms or category filter.
+              {searchQuery 
+                ? `No results found for "${searchQuery}". Try adjusting your search terms.`
+                : 'Try adjusting your category filter.'
+              }
             </p>
           </CardContent>
         </Card>
