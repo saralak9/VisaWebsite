@@ -1,0 +1,115 @@
+import React, { useState } from 'react';
+import { Search, User, Globe, Menu } from 'lucide-react';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
+import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  return (
+    <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center space-x-2">
+            <div className="text-2xl font-bold text-blue-600">
+              atlys
+            </div>
+            <div className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full font-medium">
+              VISAS ON
+            </div>
+          </div>
+
+          {/* Search Bar - Hidden on mobile */}
+          <div className="hidden md:flex items-center flex-1 max-w-md mx-8">
+            <div className="relative w-full">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+              <Input
+                type="text"
+                placeholder="Search countries"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-4 py-2 w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+          </div>
+
+          {/* Right Side Navigation */}
+          <div className="flex items-center space-x-4">
+            {/* On Time Guaranteed Badge */}
+            <div className="hidden lg:flex items-center space-x-1 bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span>On Time Guaranteed</span>
+            </div>
+
+            {/* Country Selector */}
+            <div className="hidden md:block">
+              <Select defaultValue="us">
+                <SelectTrigger className="w-[60px] border-none shadow-none">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="us">
+                    <div className="flex items-center space-x-2">
+                      <img 
+                        src="https://media.atlys.com/image/upload/country_flags/us.svg" 
+                        alt="US" 
+                        className="w-4 h-4"
+                      />
+                      <span>US</span>
+                    </div>
+                  </SelectItem>
+                  <SelectItem value="in">
+                    <div className="flex items-center space-x-2">
+                      <img 
+                        src="https://media.atlys.com/image/upload/country_flags/in.svg" 
+                        alt="India" 
+                        className="w-4 h-4"
+                      />
+                      <span>IN</span>
+                    </div>
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* User Icon */}
+            <Button variant="ghost" size="sm" className="p-2">
+              <User className="h-5 w-5 text-gray-600" />
+            </Button>
+
+            {/* Mobile Menu */}
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+              <SheetTrigger asChild className="md:hidden">
+                <Button variant="ghost" size="sm" className="p-2">
+                  <Menu className="h-5 w-5 text-gray-600" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <div className="flex flex-col space-y-4 mt-6">
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+                    <Input
+                      type="text"
+                      placeholder="Search countries"
+                      className="pl-10 pr-4 py-2 w-full"
+                    />
+                  </div>
+                  <div className="flex items-center space-x-1 bg-green-100 text-green-700 px-3 py-2 rounded-full text-sm font-medium justify-center">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span>On Time Guaranteed</span>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
