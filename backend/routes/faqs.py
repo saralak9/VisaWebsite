@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException, status, Depends, Query
 from motor.motor_asyncio import AsyncIOMotorDatabase
 from typing import List, Optional
 from models.faq import FAQ, FAQResponse
+from datetime import datetime
 import re
 
 router = APIRouter(prefix="/faqs", tags=["faqs"])
