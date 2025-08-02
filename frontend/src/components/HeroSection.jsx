@@ -59,10 +59,10 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="relative kpvs-gradient-subtle">
       {/* Important Updates Banner */}
       {showBanner && (
-        <div className={`${getBannerColors(importantUpdate.type)} py-3 px-4 text-center relative`}>
+        <div className={`${getBannerColors(importantUpdate.type)} py-3 px-4 text-center relative kpvs-shadow`}>
           <div className="flex items-center justify-center space-x-2 text-sm">
             {getBannerIcon(importantUpdate.type)}
             <span>{importantUpdate.message}</span>
@@ -71,7 +71,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="sm" 
-                className="ml-4 bg-white text-blue-600 hover:bg-gray-100"
+                className="ml-4 kpvs-btn-secondary bg-white border-white text-current hover:bg-white/90"
                 onClick={() => {
                   if (importantUpdate.actionUrl.startsWith('#')) {
                     document.querySelector(importantUpdate.actionUrl)?.scrollIntoView({ behavior: 'smooth' });
@@ -86,7 +86,7 @@ const HeroSection = () => {
             {importantUpdate.dismissible && (
               <button
                 onClick={() => setShowBanner(false)}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-200"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-200 transition-colors"
                 aria-label="Close banner"
               >
                 <X className="h-4 w-4" />
