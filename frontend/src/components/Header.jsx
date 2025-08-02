@@ -96,21 +96,21 @@ const Header = () => {
               {isAuthenticated ? (
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="sm" className="p-2">
-                      <User className="h-5 w-5 text-gray-600" />
+                    <Button variant="ghost" size="sm" className="p-2 kpvs-hover-blue-50 rounded-lg transition-colors">
+                      <User className="h-5 w-5 kpvs-text-gray-700" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-56">
-                    <div className="px-3 py-2 border-b">
-                      <p className="text-sm font-medium">{user?.fullName}</p>
-                      <p className="text-xs text-gray-500">{user?.email}</p>
+                  <DropdownMenuContent align="end" className="w-56 kpvs-card kpvs-shadow-lg">
+                    <div className="px-3 py-2 border-b kpvs-border-gray-200">
+                      <p className="text-sm font-medium kpvs-text-gray-900">{user?.fullName}</p>
+                      <p className="text-xs kpvs-text-gray-600">{user?.email}</p>
                     </div>
-                    <DropdownMenuItem>
-                      <Settings className="mr-2 h-4 w-4" />
+                    <DropdownMenuItem className="kpvs-hover-blue-50">
+                      <Settings className="mr-2 h-4 w-4 kpvs-text-gray-600" />
                       <span>Profile Settings</span>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem onClick={handleLogout} className="text-red-600">
+                    <DropdownMenuItem onClick={handleLogout} className="kpvs-text-error hover:kpvs-bg-error-light">
                       <LogOut className="mr-2 h-4 w-4" />
                       <span>Logout</span>
                     </DropdownMenuItem>
