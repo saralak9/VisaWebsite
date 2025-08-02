@@ -120,7 +120,7 @@ const HeroSection = () => {
 
           {/* Right Column - Content */}
           <div className="space-y-8">
-            <div>
+            <div className="text-center">
               <h2 className="text-5xl font-bold kpvs-text-gray-900 mb-4">
                 <span className="kpvs-text-blue">USA Visa Services</span>
               </h2>
