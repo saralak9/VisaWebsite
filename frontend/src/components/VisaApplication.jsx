@@ -196,19 +196,21 @@ const VisaApplication = () => {
     <>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold kpvs-text-gray-900 mb-4">
             Start Your USA Visa Application
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl kpvs-text-gray-700">
             Complete your application in a few simple steps
           </p>
           {!isAuthenticated && (
-            <Alert className="mt-4 max-w-md mx-auto">
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription>
-                Please login to save your progress and submit your application.
-              </AlertDescription>
-            </Alert>
+            <div className="mt-4 max-w-md mx-auto kpvs-bg-warning-light kpvs-border-warning rounded-lg p-4">
+              <div className="flex items-start space-x-3">
+                <AlertCircle className="h-5 w-5 kpvs-text-warning-dark mt-0.5 flex-shrink-0" />
+                <p className="text-sm kpvs-text-warning-dark">
+                  Please login to save your progress and submit your application.
+                </p>
+              </div>
+            </div>
           )}
         </div>
 
