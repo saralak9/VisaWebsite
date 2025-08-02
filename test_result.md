@@ -272,7 +272,7 @@ frontend:
           comment: "Ready for testing - API integration with authentication, countries, FAQs, and visa applications"
         - working: true
           agent: "testing"
-          comment: "✅ PASSED - Backend API integration working excellently. API base URL configured correctly (https://4d187325-79a1-44b4-b2e4-9b78c3784fdd.preview.emergentagent.com/api). Multiple API endpoints tested: /api/faqs (loading FAQ data), /api/countries (country selection), /api/auth/* (authentication). Axios interceptors handling authentication tokens. Error handling and loading states implemented. All API calls successful during testing."
+          comment: "✅ PASSED - Backend API integration working excellently. API base URL configured correctly (https://22f86b8f-6485-4592-9598-006437a949fb.preview.emergentagent.com/api). Multiple API endpoints tested: /api/faqs (loading FAQ data), /api/countries (country selection), /api/auth/* (authentication). Axios interceptors handling authentication tokens. Error handling and loading states implemented. All API calls successful during testing."
 
 metadata:
   created_by: "testing_agent"
@@ -291,6 +291,6 @@ agent_communication:
     - agent: "testing"
       message: "Backend API testing completed successfully. All 14 test cases passed (100% success rate). Fixed two critical issues: 1) FAQs API missing datetime fields in seeded data, 2) Visa applications BSON serialization error with date objects. All core functionality working: health checks, countries API, FAQs with search, authentication (register/login), visa applications CRUD, and proper error handling for protected endpoints."
     - agent: "testing"
-      message: "Starting comprehensive frontend testing for Atlys USA Visa application. Will test: 1) Homepage and navigation, 2) User authentication flow with registration/login, 3) FAQ section with search and filtering, 4) Country selection modal, 5) Multi-step visa application process, 6) Backend API integration. Frontend URL: http://localhost:3000, Backend URL: https://4d187325-79a1-44b4-b2e4-9b78c3784fdd.preview.emergentagent.com/api"
+      message: "Starting comprehensive frontend testing for Atlys USA Visa application. Will test: 1) Homepage and navigation, 2) User authentication flow with registration/login, 3) FAQ section with search and filtering, 4) Country selection modal, 5) Multi-step visa application process, 6) Backend API integration. Frontend URL: http://localhost:3000, Backend URL: https://22f86b8f-6485-4592-9598-006437a949fb.preview.emergentagent.com/api"
     - agent: "testing"
       message: "✅ FRONTEND TESTING COMPLETED SUCCESSFULLY! All 6 major components tested and working: 1) Homepage & Navigation - Hero section, images, ratings, navigation all functional. 2) User Authentication - Modal opens, registration/login forms work, validation implemented. 3) FAQ Section - 26+ FAQs loaded from backend, search and category filtering working. 4) Country Selection - Modal and API integration working. 5) Visa Application Process - Multi-step form with 4 visa types, progress tracking, validation, authentication requirements. 6) Backend Integration - Multiple API endpoints tested successfully (/api/faqs, /api/countries, /api/auth). No critical issues found. Application ready for production use."
