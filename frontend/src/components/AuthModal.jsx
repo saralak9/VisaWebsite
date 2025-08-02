@@ -31,7 +31,7 @@ const AuthModal = ({ isOpen, onClose }) => {
 
   const resetForms = () => {
     setLoginForm({ email: '', password: '' });
-    setRegisterForm({ fullName: '', email: '', password: '', phone: '', citizenship: 'US' });
+    setRegisterForm({ fullName: '', email: '', password: '', phone: '' });
     setError('');
     setSuccess('');
     setLoading(false);
