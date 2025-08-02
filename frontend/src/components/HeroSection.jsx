@@ -19,7 +19,25 @@ const HeroSection = () => {
     dismissible: true
   };
 
-  const nextImage = () => {
+  const getBannerColors = (type) => {
+    switch(type) {
+      case 'warning': return 'bg-orange-600 text-white';
+      case 'error': return 'bg-red-600 text-white';
+      case 'success': return 'bg-green-600 text-white';
+      case 'info': 
+      default: return 'bg-blue-600 text-white';
+    }
+  };
+
+  const getBannerIcon = (type) => {
+    switch(type) {
+      case 'warning': return <AlertCircle className="h-4 w-4" />;
+      case 'error': return <AlertCircle className="h-4 w-4" />;
+      case 'success': return <AlertCircle className="h-4 w-4" />;
+      case 'info':
+      default: return <AlertCircle className="h-4 w-4" />;
+    }
+  };
     setCurrentImageIndex((prev) => (prev + 1) % mockUSAImages.length);
   };
 
