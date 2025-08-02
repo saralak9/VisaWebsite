@@ -501,18 +501,18 @@ const VisaApplication = () => {
                 {/* Steps 5 & 6: Completion Messages */}
                 {currentStep > 4 && (
                   <div className="text-center py-8">
-                    <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <CheckCircle className="h-16 w-16 kpvs-text-success mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold kpvs-text-gray-900 mb-2">
                       Step {currentStep} Completed!
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="kpvs-text-gray-700">
                       {mockApplicationSteps[currentStep - 1]?.description}
                     </p>
                     {currentStep === mockApplicationSteps.length && (
                       <div className="mt-6">
-                        <Badge className="bg-green-500 text-white px-4 py-2">
+                        <span className="kpvs-badge-success px-4 py-2">
                           Application Ready for Submission
-                        </Badge>
+                        </span>
                       </div>
                     )}
                   </div>
