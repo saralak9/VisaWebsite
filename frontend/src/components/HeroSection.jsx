@@ -142,8 +142,8 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <div className="space-y-4">
               <Button 
-                size="lg" 
-                className="w-full kpvs-btn-primary text-base font-semibold"
+                size="default" 
+                className="kpvs-btn-primary px-8 py-3 text-base font-medium rounded-lg"
               >
                 <span className="relative">Start Your Application</span>
               </Button>
