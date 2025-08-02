@@ -137,48 +137,46 @@ const FAQ = () => {
 
       {/* Error Display */}
       {error && (
-        <Card className="mb-8 border-red-200 bg-red-50">
-          <CardContent className="p-4">
-            <p className="text-red-600 text-center">{error}</p>
-          </CardContent>
-        </Card>
+        <div className="mb-8 kpvs-bg-error-light kpvs-border-error rounded-lg p-4">
+          <p className="kpvs-text-error-dark text-center">{error}</p>
+        </div>
       )}
 
       {/* Loading State */}
       {loading ? (
-        <Card>
-          <CardContent className="p-12 text-center">
-            <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4 text-blue-600" />
-            <p className="text-gray-600">Loading FAQs...</p>
-          </CardContent>
-        </Card>
+        <div className="kpvs-card">
+          <div className="p-12 text-center">
+            <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4 kpvs-text-blue" />
+            <p className="kpvs-text-gray-700">Loading FAQs...</p>
+          </div>
+        </div>
       ) : faqs.length > 0 ? (
         /* FAQ Accordion */
-        <Card>
-          <CardContent className="p-6">
+        <div className="kpvs-card">
+          <div className="p-6">
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq) => (
                 <AccordionItem
                   key={faq.id}
                   value={`item-${faq.id}`}
-                  className="border border-gray-200 rounded-lg px-4"
+                  className="border kpvs-border-gray-200 rounded-lg px-4 hover:kpvs-shadow transition-shadow"
                 >
                   <AccordionTrigger className="hover:no-underline py-4">
                     <div className="flex items-start space-x-3 text-left">
-                      <HelpCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <HelpCircle className="h-5 w-5 kpvs-text-blue mt-0.5 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold text-gray-900 text-base">
+                        <h3 className="font-semibold kpvs-text-gray-900 text-base">
                           {faq.question}
                         </h3>
-                        <Badge variant="outline" className="mt-2 text-xs">
+                        <span className="kpvs-badge-primary mt-2 text-xs">
                           {faq.category}
-                        </Badge>
+                        </span>
                       </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="pb-4 pt-2">
                     <div className="ml-8 prose prose-sm max-w-none">
-                      <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                      <div className="kpvs-text-gray-700 leading-relaxed whitespace-pre-line">
                         {faq.answer}
                       </div>
                     </div>
@@ -186,24 +184,24 @@ const FAQ = () => {
                 </AccordionItem>
               ))}
             </Accordion>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       ) : (
         /* No Results */
-        <Card>
-          <CardContent className="p-12 text-center">
-            <HelpCircle className="h-16 w-16 text-gray-300 mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+        <div className="kpvs-card">
+          <div className="p-12 text-center">
+            <HelpCircle className="h-16 w-16 kpvs-text-gray-300 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold kpvs-text-gray-900 mb-2">
               No FAQs found
             </h3>
-            <p className="text-gray-600">
+            <p className="kpvs-text-gray-600">
               {searchQuery 
                 ? `No results found for "${searchQuery}". Try adjusting your search terms.`
                 : 'Try adjusting your category filter.'
               }
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       )}
 
       {/* Contact Support */}
