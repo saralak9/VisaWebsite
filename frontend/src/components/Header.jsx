@@ -34,10 +34,10 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <div className="text-2xl font-bold text-blue-600">
-                atlys
+                KPVS
               </div>
               <div className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full font-medium">
-                VISAS ON
+                Anytime, Anywhere
               </div>
             </div>
 
