@@ -133,8 +133,7 @@ const HeroSection = () => {
             <div className="flex justify-center">
               <div className="kpvs-card p-6 hover:kpvs-shadow-md transition-all max-w-sm">
                 <div className="text-center">
-                  <div className="text-2xl font-bold kpvs-text-blue mb-2">1-2 weeks</div>
-                  <div className="text-sm kpvs-text-gray-600">Appointment availability</div>
+                  <div className="text-lg font-semibold kpvs-text-gray-700">Appointment Availability: 2 Weeks</div>
                 </div>
               </div>
             </div>
