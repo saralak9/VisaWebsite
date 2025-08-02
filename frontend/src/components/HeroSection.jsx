@@ -114,42 +114,6 @@ const HeroSection = () => {
                 ))}
               </div>
             </div>
-
-            {/* Thumbnail Grid */}
-            <div className="grid grid-cols-4 gap-3">
-              {mockUSAImages.slice(0, 4).map((image, index) => (
-                <div
-                  key={index}
-                  className={`relative overflow-hidden rounded-lg cursor-pointer transition-all duration-300 ${
-                    index === currentImageIndex ? 'ring-2 ring-blue-500' : 'hover:opacity-80'
-                  }`}
-                  onClick={() => setCurrentImageIndex(index)}
-                >
-                  <img
-                    src={image}
-                    alt={`USA ${index + 1}`}
-                    className="w-full h-20 object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* Ratings */}
-            <div className="flex items-center justify-between mt-6">
-              <div className="flex items-center space-x-2">
-                <Badge variant="secondary" className="bg-green-100 text-green-700">
-                  Great
-                </Badge>
-                <div className="flex items-center space-x-1">
-                  <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  <span className="font-semibold">4.7</span>
-                </div>
-              </div>
-              <div className="flex items-center space-x-1">
-                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                <span className="font-semibold">4.6</span>
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Content */}
