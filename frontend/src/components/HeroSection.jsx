@@ -121,39 +121,36 @@ const HeroSection = () => {
           {/* Right Column - Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-5xl font-bold text-gray-900 mb-4">
-                <span className="text-kpvs-blue">USA Visa Services</span>
+              <h2 className="text-5xl font-bold kpvs-text-gray-900 mb-4">
+                <span className="kpvs-text-blue">USA Visa Services</span>
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl kpvs-text-gray-700 leading-relaxed">
                 Get your US visa hassle-free with KP Visa Services. We offer quick processing, expert assistance, and guaranteed on-time delivery.
               </p>
             </div>
 
             {/* Key Features */}
             <div className="grid grid-cols-2 gap-6">
-              <Card className="p-6 border-2 border-blue-100 hover:border-kpvs-blue/30 transition-colors relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-kpvs-orange to-kpvs-red"></div>
+              <div className="kpvs-card-accent p-6 hover:kpvs-shadow-md transition-all">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-kpvs-blue mb-2">3-5 days</div>
-                  <div className="text-sm text-gray-600">Processing Time</div>
+                  <div className="text-2xl font-bold kpvs-text-blue mb-2">3-5 days</div>
+                  <div className="text-sm kpvs-text-gray-600">Processing Time</div>
                 </div>
-              </Card>
-              <Card className="p-6 border-2 border-green-100 hover:border-green-300 transition-colors relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-kpvs-orange to-kpvs-red"></div>
+              </div>
+              <div className="kpvs-card-accent p-6 hover:kpvs-shadow-md transition-all">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">10 years</div>
-                  <div className="text-sm text-gray-600">Visa Validity</div>
+                  <div className="text-2xl font-bold kpvs-text-success mb-2">10 years</div>
+                  <div className="text-sm kpvs-text-gray-600">Visa Validity</div>
                 </div>
-              </Card>
+              </div>
             </div>
 
             {/* CTA Buttons */}
             <div className="space-y-4">
               <Button 
                 size="lg" 
-                className="w-full bg-gradient-to-r from-kpvs-blue to-kpvs-blue-light hover:from-kpvs-blue-dark hover:to-kpvs-blue text-white py-4 text-lg relative overflow-hidden group"
+                className="w-full kpvs-btn-primary py-4 text-lg font-semibold tracking-wide transform transition-all duration-200 hover:scale-105"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-kpvs-orange/20 to-kpvs-red/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <span className="relative">Start Your Application</span>
               </Button>
             </div>
