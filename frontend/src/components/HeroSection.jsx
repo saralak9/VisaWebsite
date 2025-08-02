@@ -189,12 +189,12 @@ const HeroSection = () => {
                 size="lg" 
                 className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 text-lg relative overflow-hidden group"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <span className="relative">Start Your Application</span>
               </Button>
               <div className="text-center text-sm text-gray-500">
                 ✓ Expert visa assistance  ✓ Document verification  ✓ Interview preparation  
-                <span className="text-red-500 font-semibold">✓ On-time guarantee</span>
+                <span className="text-orange-500 font-semibold">✓ On-time guarantee</span>
               </div>
             </div>
 
