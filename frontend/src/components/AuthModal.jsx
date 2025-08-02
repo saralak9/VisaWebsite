@@ -92,7 +92,7 @@ const AuthModal = ({ isOpen, onClose }) => {
       <DialogContent className="max-w-md">
         <DialogHeader>
           <DialogTitle className="text-center text-2xl font-bold">
-            Welcome to Atlys
+            Welcome to KPVS
           </DialogTitle>
         </DialogHeader>
 
