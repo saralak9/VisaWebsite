@@ -202,16 +202,6 @@ const VisaApplication = () => {
           <p className="text-xl kpvs-text-gray-700">
             Complete your application in a few simple steps
           </p>
-          {!isAuthenticated && (
-            <div className="mt-4 max-w-md mx-auto kpvs-bg-warning-light kpvs-border-warning rounded-lg p-4">
-              <div className="flex items-start space-x-3">
-                <AlertCircle className="h-5 w-5 kpvs-text-warning-dark mt-0.5 flex-shrink-0" />
-                <p className="text-sm kpvs-text-warning-dark">
-                  Please login to save your progress and submit your application.
-                </p>
-              </div>
-            </div>
-          )}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
