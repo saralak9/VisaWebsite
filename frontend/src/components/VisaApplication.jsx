@@ -522,7 +522,7 @@ const VisaApplication = () => {
                   <Button
                     onClick={nextStep}
                     disabled={currentStep === mockApplicationSteps.length || loading}
-                    className="bg-blue-600 hover:bg-blue-700"
+                    className="bg-kpvs-blue hover:bg-kpvs-blue-dark"
                   >
                     {loading ? (
                       <>
