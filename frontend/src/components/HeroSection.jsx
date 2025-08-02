@@ -125,9 +125,7 @@ const HeroSection = () => {
                 <span className="text-blue-600">USA Visa Services</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Get your US visa hassle-free with <span className="font-semibold text-blue-600">KPVS</span>. We offer quick processing, 
-                expert assistance, and guaranteed on-time delivery 
-                for American Citizens.
+                Get your US visa hassle-free with KP Visa Services. We offer quick processing, expert assistance, and guaranteed on-time delivery.
               </p>
             </div>
 
