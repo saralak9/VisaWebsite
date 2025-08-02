@@ -300,29 +300,29 @@ const VisaApplication = () => {
                       <h3 className="text-lg font-semibold mb-4">Select Visa Type</h3>
                       <div className="grid md:grid-cols-2 gap-4">
                         {visaTypes.map((visa) => (
-                          <Card
+                          <div
                             key={visa.id}
-                            className={`cursor-pointer transition-all hover:shadow-md ${
+                            className={`kpvs-card cursor-pointer transition-all hover:kpvs-shadow-md ${
                               selectedVisaType === visa.id
-                                ? 'ring-2 ring-blue-500 bg-blue-50'
-                                : ''
+                                ? 'ring-2 kpvs-border-blue kpvs-bg-blue-50'
+                                : 'hover:kpvs-border-blue-light'
                             }`}
                             onClick={() => setSelectedVisaType(visa.id)}
                           >
-                            <CardContent className="p-4">
-                              <h4 className="font-semibold text-gray-900">{visa.name}</h4>
-                              <div className="mt-2 space-y-1 text-sm text-gray-600">
+                            <div className="p-4">
+                              <h4 className="font-semibold kpvs-text-gray-900">{visa.name}</h4>
+                              <div className="mt-2 space-y-1 text-sm kpvs-text-gray-600">
                                 <p>Duration: {visa.duration}</p>
                                 <p>Valid for: {visa.validity}</p>
                                 <div className="flex items-center justify-between mt-3">
-                                  <Badge variant="secondary">${visa.price}</Badge>
+                                  <span className="kpvs-badge-primary">${visa.price}</span>
                                   {selectedVisaType === visa.id && (
-                                    <CheckCircle className="h-5 w-5 text-green-500" />
+                                    <CheckCircle className="h-5 w-5 kpvs-text-success" />
                                   )}
                                 </div>
                               </div>
-                            </CardContent>
-                          </Card>
+                            </div>
+                          </div>
                         ))}
                       </div>
                     </div>
