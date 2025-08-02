@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
 import { mockUSAImages, mockReviews } from '../data/mock';
-import { Star, Smartphone, Download } from 'lucide-react';
+import { Star, Smartphone, Download, AlertCircle, X } from 'lucide-react';
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
