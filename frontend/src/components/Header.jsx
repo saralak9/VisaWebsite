@@ -14,6 +14,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  
+  // Get active countries for the selector
+  const activeCountries = getActiveCountries();
 
   const handleLogout = () => {
     logout();
