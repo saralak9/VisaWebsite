@@ -122,7 +122,7 @@ const HeroSection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-5xl font-bold text-gray-900 mb-4">
-                <span className="text-blue-600">USA Visa Services</span>
+                <span className="text-kpvs-blue">USA Visa Services</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
                 Get your US visa hassle-free with KP Visa Services. We offer quick processing, expert assistance, and guaranteed on-time delivery.
