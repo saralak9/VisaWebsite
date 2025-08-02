@@ -38,6 +38,8 @@ const HeroSection = () => {
       default: return <AlertCircle className="h-4 w-4" />;
     }
   };
+
+  const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % mockUSAImages.length);
   };
 
