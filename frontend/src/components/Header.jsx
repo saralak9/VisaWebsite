@@ -50,13 +50,13 @@ const Header = () => {
             {/* Search Bar - Hidden on mobile */}
             <div className="hidden md:flex items-center flex-1 max-w-md mx-8">
               <div className="relative w-full">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 kpvs-text-gray-600 h-4 w-4" />
                 <Input
                   type="text"
                   placeholder="Search countries"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 pr-4 py-2 w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="pl-10 pr-4 py-2 w-full kpvs-border-gray-300 rounded-lg kpvs-focus border-2 transition-colors hover:kpvs-border-blue-light"
                 />
               </div>
             </div>
