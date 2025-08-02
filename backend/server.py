@@ -19,7 +19,7 @@ client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 # Create the main app
-app = FastAPI(title="Atlys USA Visa API", version="1.0.0")
+app = FastAPI(title="KPVS USA Visa API", version="1.0.0")
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
