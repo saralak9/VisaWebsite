@@ -1,42 +1,56 @@
-/* KPVS Brand Colors - Matching Logo Exactly */
+/* KPVS Brand Colors - Professional Color System */
 :root {
-  /* Primary KPVS Blue - matches the logo */
+  /* Primary KPVS Blue - matches the logo exactly */
   --kpvs-blue: #1a365d;
   --kpvs-blue-light: #2c5282;
   --kpvs-blue-dark: #0f2a44;
+  --kpvs-blue-50: #f0f7ff;
+  --kpvs-blue-100: #e0f2fe;
+  --kpvs-blue-200: #bae6fd;
   
-  /* Secondary colors */
+  /* Secondary KPVS Colors */
   --kpvs-orange: #ed8936;
   --kpvs-orange-light: #f6ad55;
   --kpvs-red: #e53e3e;
   
-  /* Neutral colors */
-  --kpvs-gray-900: #1a202c;
-  --kpvs-gray-600: #4a5568;
-  --kpvs-gray-400: #a0aec0;
+  /* Professional Grays */
+  --kpvs-gray-50: #f9fafb;
+  --kpvs-gray-100: #f3f4f6;
+  --kpvs-gray-200: #e5e7eb;
+  --kpvs-gray-300: #d1d5db;
+  --kpvs-gray-400: #9ca3af;
+  --kpvs-gray-500: #6b7280;
+  --kpvs-gray-600: #4b5563;
+  --kpvs-gray-700: #374151;
+  --kpvs-gray-800: #1f2937;
+  --kpvs-gray-900: #111827;
   
-  /* Success and warning */
-  --kpvs-green: #38a169;
-  --kpvs-green-light: #48bb78;
+  /* Status Colors - Professional variants */
+  --kpvs-success: #10b981;
+  --kpvs-success-light: #34d399;
+  --kpvs-success-bg: #ecfdf5;
+  --kpvs-warning: #f59e0b;
+  --kpvs-warning-light: #fbbf24;
+  --kpvs-warning-bg: #fef3c7;
+  --kpvs-error: #ef4444;
+  --kpvs-error-light: #f87171;
+  --kpvs-error-bg: #fef2f2;
 }
 
-/* Apply KPVS brand colors */
-.kpvs-text-blue {
-  color: var(--kpvs-blue) !important;
-}
+/* KPVS Brand Utility Classes */
+.kpvs-text-blue { color: var(--kpvs-blue) !important; }
+.kpvs-text-blue-light { color: var(--kpvs-blue-light) !important; }
+.kpvs-bg-blue { background-color: var(--kpvs-blue) !important; }
+.kpvs-bg-blue-light { background-color: var(--kpvs-blue-light) !important; }
+.kpvs-bg-blue-50 { background-color: var(--kpvs-blue-50) !important; }
+.kpvs-border-blue { border-color: var(--kpvs-blue) !important; }
+.kpvs-border-blue-200 { border-color: var(--kpvs-blue-200) !important; }
 
-.kpvs-bg-blue {
-  background-color: var(--kpvs-blue) !important;
-}
+.kpvs-hover-blue:hover { background-color: var(--kpvs-blue-dark) !important; }
+.kpvs-hover-blue-50:hover { background-color: var(--kpvs-blue-50) !important; }
 
-.kpvs-bg-blue-gradient {
-  background: linear-gradient(135deg, var(--kpvs-blue) 0%, var(--kpvs-blue-light) 100%) !important;
-}
-
-.kpvs-border-blue {
-  border-color: var(--kpvs-blue) !important;
-}
-
-.kpvs-hover-blue:hover {
-  background-color: var(--kpvs-blue-dark) !important;
+/* Focus ring consistency */
+.kpvs-focus:focus { 
+  outline: 2px solid var(--kpvs-blue) !important;
+  outline-offset: 2px !important;
 }
