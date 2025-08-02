@@ -6,7 +6,7 @@ import { Label } from './ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Alert, AlertDescription } from './ui/alert';
 import { useAuth } from '../contexts/AuthContext';
-import { Eye, EyeOff, User, Mail, Phone, Globe } from 'lucide-react';
+import { Eye, EyeOff, User, Mail, Phone } from 'lucide-react';
 
 const AuthModal = ({ isOpen, onClose }) => {
   const { login, register } = useAuth();
