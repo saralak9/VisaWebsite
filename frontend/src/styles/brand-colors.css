@@ -71,20 +71,190 @@
   --kpvs-shadow-xl: 0 20px 25px -5px rgba(26, 54, 93, 0.1), 0 10px 10px -5px rgba(26, 54, 93, 0.04);
 }
 
-/* KPVS Brand Utility Classes */
+/* KPVS Brand Utility Classes - Comprehensive Professional Set */
+
+/* Primary Color Classes */
 .kpvs-text-blue { color: var(--kpvs-blue) !important; }
 .kpvs-text-blue-light { color: var(--kpvs-blue-light) !important; }
+.kpvs-text-blue-dark { color: var(--kpvs-blue-dark) !important; }
 .kpvs-bg-blue { background-color: var(--kpvs-blue) !important; }
 .kpvs-bg-blue-light { background-color: var(--kpvs-blue-light) !important; }
+.kpvs-bg-blue-dark { background-color: var(--kpvs-blue-dark) !important; }
 .kpvs-bg-blue-50 { background-color: var(--kpvs-blue-50) !important; }
+.kpvs-bg-blue-100 { background-color: var(--kpvs-blue-100) !important; }
 .kpvs-border-blue { border-color: var(--kpvs-blue) !important; }
+.kpvs-border-blue-light { border-color: var(--kpvs-blue-light) !important; }
 .kpvs-border-blue-200 { border-color: var(--kpvs-blue-200) !important; }
 
-.kpvs-hover-blue:hover { background-color: var(--kpvs-blue-dark) !important; }
-.kpvs-hover-blue-50:hover { background-color: var(--kpvs-blue-50) !important; }
+/* Secondary Color Classes */
+.kpvs-text-orange { color: var(--kpvs-orange) !important; }
+.kpvs-text-orange-light { color: var(--kpvs-orange-light) !important; }
+.kpvs-bg-orange { background-color: var(--kpvs-orange) !important; }
+.kpvs-bg-orange-light { background-color: var(--kpvs-orange-light) !important; }
+.kpvs-bg-orange-50 { background-color: var(--kpvs-orange-50) !important; }
+.kpvs-border-orange { border-color: var(--kpvs-orange) !important; }
 
-/* Focus ring consistency */
+/* Status Color Classes */
+.kpvs-text-success { color: var(--kpvs-success) !important; }
+.kpvs-bg-success { background-color: var(--kpvs-success) !important; }
+.kpvs-bg-success-light { background-color: var(--kpvs-success-bg) !important; }
+.kpvs-border-success { border-color: var(--kpvs-success-border) !important; }
+
+.kpvs-text-warning { color: var(--kpvs-warning) !important; }
+.kpvs-bg-warning { background-color: var(--kpvs-warning) !important; }
+.kpvs-bg-warning-light { background-color: var(--kpvs-warning-bg) !important; }
+.kpvs-border-warning { border-color: var(--kpvs-warning-border) !important; }
+
+.kpvs-text-error { color: var(--kpvs-error) !important; }
+.kpvs-bg-error { background-color: var(--kpvs-error) !important; }
+.kpvs-bg-error-light { background-color: var(--kpvs-error-bg) !important; }
+.kpvs-border-error { border-color: var(--kpvs-error-border) !important; }
+
+/* Gray Scale Classes */
+.kpvs-text-gray-600 { color: var(--kpvs-gray-600) !important; }
+.kpvs-text-gray-700 { color: var(--kpvs-gray-700) !important; }
+.kpvs-text-gray-800 { color: var(--kpvs-gray-800) !important; }
+.kpvs-text-gray-900 { color: var(--kpvs-gray-900) !important; }
+.kpvs-bg-gray-50 { background-color: var(--kpvs-gray-50) !important; }
+.kpvs-bg-gray-100 { background-color: var(--kpvs-gray-100) !important; }
+.kpvs-bg-gray-200 { background-color: var(--kpvs-gray-200) !important; }
+.kpvs-border-gray-200 { border-color: var(--kpvs-gray-200) !important; }
+.kpvs-border-gray-300 { border-color: var(--kpvs-gray-300) !important; }
+
+/* Professional Gradients */
+.kpvs-gradient-primary { 
+  background: var(--kpvs-gradient-primary) !important; 
+  color: white !important;
+}
+.kpvs-gradient-accent { 
+  background: var(--kpvs-gradient-accent) !important; 
+  color: white !important;
+}
+.kpvs-gradient-subtle { 
+  background: var(--kpvs-gradient-subtle) !important; 
+}
+
+/* Interactive States */
+.kpvs-hover-blue:hover { 
+  background-color: var(--kpvs-blue-dark) !important; 
+  color: white !important;
+}
+.kpvs-hover-blue-50:hover { 
+  background-color: var(--kpvs-blue-50) !important; 
+}
+.kpvs-hover-orange:hover { 
+  background-color: var(--kpvs-orange-dark) !important; 
+  color: white !important;
+}
+
+/* Professional Shadows */
+.kpvs-shadow { box-shadow: var(--kpvs-shadow) !important; }
+.kpvs-shadow-md { box-shadow: var(--kpvs-shadow-md) !important; }
+.kpvs-shadow-lg { box-shadow: var(--kpvs-shadow-lg) !important; }
+
+/* Professional Focus States */
 .kpvs-focus:focus { 
-  outline: 2px solid var(--kpvs-blue) !important;
+  outline: 2px solid var(--kpvs-focus-ring) !important;
   outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1) !important;
+}
+
+/* Professional Button Styles */
+.kpvs-btn-primary {
+  background: var(--kpvs-gradient-primary) !important;
+  color: white !important;
+  border: none !important;
+  transition: all 0.2s ease-in-out !important;
+}
+.kpvs-btn-primary:hover {
+  background: var(--kpvs-gradient-primary-hover) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: var(--kpvs-shadow-md) !important;
+}
+
+.kpvs-btn-secondary {
+  background-color: transparent !important;
+  color: var(--kpvs-blue) !important;
+  border: 2px solid var(--kpvs-blue) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+.kpvs-btn-secondary:hover {
+  background-color: var(--kpvs-blue) !important;
+  color: white !important;
+}
+
+.kpvs-btn-accent {
+  background: var(--kpvs-gradient-accent) !important;
+  color: white !important;
+  border: none !important;
+  transition: all 0.2s ease-in-out !important;
+}
+.kpvs-btn-accent:hover {
+  background: linear-gradient(135deg, var(--kpvs-orange-dark) 0%, var(--kpvs-red-dark) 100%) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Professional Card Styles */
+.kpvs-card {
+  background: white !important;
+  border: 1px solid var(--kpvs-gray-200) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--kpvs-shadow) !important;
+  transition: all 0.3s ease !important;
+}
+.kpvs-card:hover {
+  box-shadow: var(--kpvs-shadow-lg) !important;
+  transform: translateY(-2px) !important;
+}
+
+.kpvs-card-accent {
+  background: white !important;
+  border: 2px solid var(--kpvs-blue-200) !important;
+  border-radius: 12px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+.kpvs-card-accent::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 4px !important;
+  height: 100% !important;
+  background: var(--kpvs-gradient-accent) !important;
+}
+.kpvs-card-accent:hover {
+  border-color: var(--kpvs-blue) !important;
+  box-shadow: var(--kpvs-shadow-md) !important;
+}
+
+/* Professional Badge Styles */
+.kpvs-badge-primary {
+  background-color: var(--kpvs-blue) !important;
+  color: white !important;
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+}
+
+.kpvs-badge-success {
+  background-color: var(--kpvs-success-bg) !important;
+  color: var(--kpvs-success-dark) !important;
+  border: 1px solid var(--kpvs-success-border) !important;
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+}
+
+.kpvs-badge-warning {
+  background-color: var(--kpvs-warning-bg) !important;
+  color: var(--kpvs-warning-dark) !important;
+  border: 1px solid var(--kpvs-warning-border) !important;
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
 }
