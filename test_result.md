@@ -282,11 +282,7 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Homepage and Navigation"
-    - "User Authentication Flow"
-    - "FAQ Section"
-    - "Visa Application Process"
-    - "Backend Integration"
+    - "All frontend tasks completed successfully"
   stuck_tasks: []
   test_all: true
   test_priority: "high_first"
