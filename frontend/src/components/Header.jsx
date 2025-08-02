@@ -120,10 +120,10 @@ const Header = () => {
                 <Button 
                   variant="ghost" 
                   size="sm" 
-                  className="p-2"
+                  className="p-2 kpvs-hover-blue-50 rounded-lg transition-colors"
                   onClick={() => setIsAuthModalOpen(true)}
                 >
-                  <User className="h-5 w-5 text-gray-600" />
+                  <User className="h-5 w-5 kpvs-text-gray-700" />
                 </Button>
               )}
 
