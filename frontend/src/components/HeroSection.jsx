@@ -151,9 +151,9 @@ const HeroSection = () => {
             <div className="space-y-4">
               <Button 
                 size="lg" 
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 text-lg relative overflow-hidden group"
+                className="w-full bg-gradient-to-r from-kpvs-blue to-kpvs-blue-light hover:from-kpvs-blue-dark hover:to-kpvs-blue text-white py-4 text-lg relative overflow-hidden group"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-kpvs-orange/20 to-kpvs-red/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <span className="relative">Start Your Application</span>
               </Button>
             </div>
