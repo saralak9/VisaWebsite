@@ -130,10 +130,10 @@ const HeroSection = () => {
             </div>
 
             {/* Key Features */}
-            <div className="flex justify-center">
-              <div className="kpvs-card p-6 hover:kpvs-shadow-md transition-all max-w-sm">
+            <div className="flex justify-center mb-6">
+              <div className="kpvs-card p-4 hover:kpvs-shadow-md transition-all">
                 <div className="text-center">
-                  <div className="text-lg font-semibold kpvs-text-gray-700">Appointment Availability: 2 Weeks</div>
+                  <div className="text-sm font-medium kpvs-text-gray-600">Appointment Availability: 2 Weeks</div>
                 </div>
               </div>
             </div>
@@ -141,8 +141,8 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <div className="flex justify-center">
               <Button 
-                size="default" 
-                className="kpvs-btn-primary px-8 py-3 text-base font-medium rounded-lg"
+                size="lg" 
+                className="kpvs-btn-primary px-12 py-4 text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
               >
                 <span className="relative">Start Your Application</span>
               </Button>
