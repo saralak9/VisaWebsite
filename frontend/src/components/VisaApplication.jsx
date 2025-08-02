@@ -217,30 +217,30 @@ const VisaApplication = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Progress Steps - Left Column */}
           <div className="lg:col-span-1">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Application Progress</CardTitle>
-              </CardHeader>
-              <CardContent>
+            <div className="kpvs-card">
+              <div className="p-6 border-b kpvs-border-gray-200">
+                <h3 className="text-lg font-semibold kpvs-text-gray-900">Application Progress</h3>
+              </div>
+              <div className="p-6">
                 <div className="space-y-4">
                   {mockApplicationSteps.map((step) => (
                     <div
                       key={step.step}
-                      className={`flex items-start space-x-3 p-3 rounded-lg transition-colors ${
+                      className={`flex items-start space-x-3 p-3 rounded-lg transition-all ${
                         currentStep === step.step
-                          ? 'bg-kpvs-blue/5 border-l-4 border-kpvs-blue'
+                          ? 'kpvs-bg-blue-50 border-l-4 kpvs-border-blue'
                           : currentStep > step.step
-                          ? 'bg-green-50'
-                          : 'bg-gray-50'
+                          ? 'kpvs-bg-success-light'
+                          : 'kpvs-bg-gray-50'
                       }`}
                     >
                       <div
-                        className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                        className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
                           currentStep === step.step
-                            ? 'bg-kpvs-blue text-white'
+                            ? 'kpvs-bg-blue text-white'
                             : currentStep > step.step
-                            ? 'bg-green-500 text-white'
-                            : 'bg-gray-300 text-gray-600'
+                            ? 'kpvs-bg-success text-white'
+                            : 'kpvs-bg-gray-300 kpvs-text-gray-600'
                         }`}
                       >
                         {currentStep > step.step ? (
@@ -250,18 +250,18 @@ const VisaApplication = () => {
                         )}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium text-gray-900">
+                        <p className="text-sm font-medium kpvs-text-gray-900">
                           {step.title}
                         </p>
-                        <p className="text-xs text-gray-600 mt-1">
+                        <p className="text-xs kpvs-text-gray-600 mt-1">
                           {step.description}
                         </p>
                       </div>
                     </div>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
 
           {/* Application Form - Right Column */}
