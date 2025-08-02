@@ -72,6 +72,12 @@ const AuthModal = ({ isOpen, onClose }) => {
       return;
     }
 
+    if (!registerForm.phone || registerForm.phone.trim().length === 0) {
+      setError('Phone number is required');
+      setLoading(false);
+      return;
+    }
+
     const result = await register(registerForm);
     
     if (result.success) {
