@@ -130,17 +130,11 @@ const HeroSection = () => {
             </div>
 
             {/* Key Features */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="kpvs-card-accent p-6 hover:kpvs-shadow-md transition-all">
+            <div className="flex justify-center">
+              <div className="kpvs-card p-6 hover:kpvs-shadow-md transition-all max-w-sm">
                 <div className="text-center">
-                  <div className="text-2xl font-bold kpvs-text-blue mb-2">3-5 days</div>
-                  <div className="text-sm kpvs-text-gray-600">Processing Time</div>
-                </div>
-              </div>
-              <div className="kpvs-card-accent p-6 hover:kpvs-shadow-md transition-all">
-                <div className="text-center">
-                  <div className="text-2xl font-bold kpvs-text-success mb-2">10 years</div>
-                  <div className="text-sm kpvs-text-gray-600">Visa Validity</div>
+                  <div className="text-2xl font-bold kpvs-text-blue mb-2">1-2 weeks</div>
+                  <div className="text-sm kpvs-text-gray-600">Appointment availability</div>
                 </div>
               </div>
             </div>
