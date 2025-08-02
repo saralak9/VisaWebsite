@@ -163,7 +163,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-            <p>© Atlys, All rights reserved</p>
+            <p>© KPVS, All rights reserved</p>
             <div className="flex items-center space-x-6">
               <a href="#" className="hover:text-white transition-colors duration-200">
                 Privacy
