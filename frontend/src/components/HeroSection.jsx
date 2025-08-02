@@ -129,13 +129,6 @@ const HeroSection = () => {
                   />
                 ))}
               </div>
-              
-              {/* Auto-scroll indicator */}
-              {!isHovered && (
-                <div className="absolute top-4 right-4 text-white/70 text-xs">
-                  Auto-scrolling
-                </div>
-              )}
             </div>
           </div>
 
