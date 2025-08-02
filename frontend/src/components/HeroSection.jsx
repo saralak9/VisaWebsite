@@ -156,11 +156,12 @@ const HeroSection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-5xl font-bold text-gray-900 mb-4">
-                USA Visa from USA
+                <span className="text-blue-600">USA Visa</span> from USA
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Get your US visa hassle-free with KPVS. We offer quick processing, 
-                expert assistance, and guaranteed on-time delivery for American Citizens.
+                Get your US visa hassle-free with <span className="font-semibold text-blue-600">KPVS</span>. We offer quick processing, 
+                expert assistance, and guaranteed on-time delivery 
+                for American Citizens.
               </p>
             </div>
 
