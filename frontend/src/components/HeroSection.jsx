@@ -140,7 +140,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="space-y-4">
+            <div className="flex justify-center">
               <Button 
                 size="default" 
                 className="kpvs-btn-primary px-8 py-3 text-base font-medium rounded-lg"
