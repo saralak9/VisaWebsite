@@ -231,15 +231,18 @@ frontend:
 
   - task: "Country Selection Modal"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/components/CitizenshipModal.jsx"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "testing"
           comment: "Ready for testing - Citizenship modal with country search and selection"
+        - working: true
+          agent: "testing"
+          comment: "✅ PASSED - Country selection functionality integrated in header with US flag selector. CitizenshipModal component implemented with search functionality and country list from backend API. Modal opens/closes properly and integrates with countries API endpoint."
 
   - task: "Visa Application Process"
     implemented: true
