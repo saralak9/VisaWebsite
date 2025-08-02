@@ -93,9 +93,9 @@ const AuthModal = ({ isOpen, onClose }) => {
         <DialogHeader>
           <div className="text-center">
             <img 
-              src="https://customer-assets.emergentagent.com/job_visa-usa-journey/artifacts/mujpczy6_image-2-removebg.png" 
+              src="https://customer-assets.emergentagent.com/job_visa-usa-journey/artifacts/m5nl3hc5_image-2-removebg%20copy.png" 
               alt="KPVS - Anytime, Anywhere" 
-              className="h-12 w-auto mx-auto mb-4"
+              className="h-10 w-auto mx-auto mb-4"
             />
             <DialogTitle className="text-2xl font-bold">
               Welcome to KPVS
