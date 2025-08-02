@@ -205,24 +205,24 @@ const FAQ = () => {
       )}
 
       {/* Contact Support */}
-      <Card className="mt-8 bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
-        <CardContent className="p-8 text-center">
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">
+      <div className="mt-8 kpvs-card kpvs-gradient-subtle border-2 kpvs-border-blue-200">
+        <div className="p-8 text-center">
+          <h3 className="text-xl font-semibold kpvs-text-gray-900 mb-2">
             Still have questions?
           </h3>
-          <p className="text-gray-600 mb-6">
+          <p className="kpvs-text-gray-700 mb-6">
             Our visa experts are here to help you with your application process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+            <button className="kpvs-btn-primary px-6 py-3 rounded-lg font-medium">
               Contact Support
             </button>
-            <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition-colors">
+            <button className="kpvs-btn-secondary px-6 py-3 rounded-lg font-medium">
               Schedule a Call
             </button>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 };
