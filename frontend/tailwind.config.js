@@ -15,6 +15,19 @@ module.exports = {
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
+  			
+  			// KPVS Brand Colors
+  			'kpvs-blue': {
+  				DEFAULT: '#1a365d',
+  				light: '#2c5282', 
+  				dark: '#0f2a44',
+  			},
+  			'kpvs-orange': {
+  				DEFAULT: '#ed8936',
+  				light: '#f6ad55',
+  			},
+  			'kpvs-red': '#e53e3e',
+  			
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
