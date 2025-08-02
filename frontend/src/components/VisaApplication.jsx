@@ -226,7 +226,7 @@ const VisaApplication = () => {
                       key={step.step}
                       className={`flex items-start space-x-3 p-3 rounded-lg transition-colors ${
                         currentStep === step.step
-                          ? 'bg-blue-50 border-l-4 border-blue-500'
+                          ? 'bg-kpvs-blue/5 border-l-4 border-kpvs-blue'
                           : currentStep > step.step
                           ? 'bg-green-50'
                           : 'bg-gray-50'
