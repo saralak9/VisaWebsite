@@ -115,20 +115,6 @@ const HeroSection = () => {
               <div className="absolute bottom-6 left-6 text-white">
                 <h1 className="text-4xl font-bold mb-2">USA Visa from USA</h1>
               </div>
-              
-              {/* Navigation Dots */}
-              <div className="absolute bottom-6 right-6 flex space-x-2">
-                {mockUSAImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImageIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/80'
-                    }`}
-                    aria-label={`Go to image ${index + 1}`}
-                  />
-                ))}
-              </div>
             </div>
           </div>
 
