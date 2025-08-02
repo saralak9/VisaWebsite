@@ -229,7 +229,7 @@ const AuthModal = ({ isOpen, onClose }) => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="phone">Phone (Optional)</Label>
+                <Label htmlFor="phone">Phone Number</Label>
                 <div className="relative">
                   <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
                   <Input
@@ -239,21 +239,7 @@ const AuthModal = ({ isOpen, onClose }) => {
                     value={registerForm.phone}
                     onChange={(e) => setRegisterForm(prev => ({ ...prev, phone: e.target.value }))}
                     className="pl-10"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="citizenship">Citizenship</Label>
-                <div className="relative">
-                  <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-                  <Input
-                    id="citizenship"
-                    type="text"
-                    placeholder="Country code (e.g., US)"
-                    value={registerForm.citizenship}
-                    onChange={(e) => setRegisterForm(prev => ({ ...prev, citizenship: e.target.value }))}
-                    className="pl-10"
+                    required
                   />
                 </div>
               </div>
