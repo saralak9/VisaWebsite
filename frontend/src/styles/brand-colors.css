@@ -1,0 +1,42 @@
+/* KPVS Brand Colors - Matching Logo Exactly */
+:root {
+  /* Primary KPVS Blue - matches the logo */
+  --kpvs-blue: #1a365d;
+  --kpvs-blue-light: #2c5282;
+  --kpvs-blue-dark: #0f2a44;
+  
+  /* Secondary colors */
+  --kpvs-orange: #ed8936;
+  --kpvs-orange-light: #f6ad55;
+  --kpvs-red: #e53e3e;
+  
+  /* Neutral colors */
+  --kpvs-gray-900: #1a202c;
+  --kpvs-gray-600: #4a5568;
+  --kpvs-gray-400: #a0aec0;
+  
+  /* Success and warning */
+  --kpvs-green: #38a169;
+  --kpvs-green-light: #48bb78;
+}
+
+/* Apply KPVS brand colors */
+.kpvs-text-blue {
+  color: var(--kpvs-blue) !important;
+}
+
+.kpvs-bg-blue {
+  background-color: var(--kpvs-blue) !important;
+}
+
+.kpvs-bg-blue-gradient {
+  background: linear-gradient(135deg, var(--kpvs-blue) 0%, var(--kpvs-blue-light) 100%) !important;
+}
+
+.kpvs-border-blue {
+  border-color: var(--kpvs-blue) !important;
+}
+
+.kpvs-hover-blue:hover {
+  background-color: var(--kpvs-blue-dark) !important;
+}
