@@ -11,7 +11,7 @@ const Footer = () => {
   ];
 
   const productLinks = [
-    { name: 'AtlysX', href: '#' },
+    { name: 'KPVS Platform', href: '#' },
     { name: 'Security', href: '#' },
     { name: 'Transparency', href: '#' },
     { name: 'Visa Pre Approval', href: '#' },
