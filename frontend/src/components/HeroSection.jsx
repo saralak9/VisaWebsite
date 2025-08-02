@@ -59,7 +59,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative min-h-[90vh] bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="relative bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Important Updates Banner */}
       {showBanner && (
         <div className={`${getBannerColors(importantUpdate.type)} py-3 px-4 text-center relative`}>
