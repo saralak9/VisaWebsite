@@ -167,13 +167,15 @@ const HeroSection = () => {
 
             {/* Key Features */}
             <div className="grid grid-cols-2 gap-6">
-              <Card className="p-6 border-2 border-blue-100 hover:border-blue-300 transition-colors">
+              <Card className="p-6 border-2 border-blue-100 hover:border-blue-300 transition-colors relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1 h-full bg-red-500"></div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-600 mb-2">3-5 days</div>
                   <div className="text-sm text-gray-600">Processing Time</div>
                 </div>
               </Card>
-              <Card className="p-6 border-2 border-green-100 hover:border-green-300 transition-colors">
+              <Card className="p-6 border-2 border-green-100 hover:border-green-300 transition-colors relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1 h-full bg-red-500"></div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-600 mb-2">10 years</div>
                   <div className="text-sm text-gray-600">Visa Validity</div>
