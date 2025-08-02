@@ -143,7 +143,7 @@ const HeroSection = () => {
             <div className="space-y-4">
               <Button 
                 size="lg" 
-                className="w-full kpvs-btn-primary py-4 text-lg font-semibold tracking-wide transform transition-all duration-200 hover:scale-105"
+                className="w-full kpvs-btn-primary text-base font-semibold"
               >
                 <span className="relative">Start Your Application</span>
               </Button>
