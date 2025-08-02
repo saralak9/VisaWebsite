@@ -7,6 +7,7 @@ import { Star, Smartphone, Download, AlertCircle, X } from 'lucide-react';
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showBanner, setShowBanner] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
   // Important updates configuration - easily editable
   const importantUpdate = {
@@ -17,6 +18,17 @@ const HeroSection = () => {
     actionUrl: "#faq", // or external URL
     dismissible: true
   };
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    if (!isHovered) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prev) => (prev + 1) % mockUSAImages.length);
+      }, 4000); // Change image every 4 seconds
+
+      return () => clearInterval(interval);
+    }
+  }, [isHovered]);
 
   const getBannerColors = (type) => {
     switch(type) {
