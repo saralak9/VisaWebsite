@@ -71,12 +71,12 @@ const Header = () => {
 
               {/* Country Selector */}
               <div className="hidden md:block">
-                <Select defaultValue={SUPPORTED_COUNTRIES[0]?.code}>
+                <Select defaultValue={activeCountries[0]?.code}>
                   <SelectTrigger className="w-[60px] border-none shadow-none">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    {SUPPORTED_COUNTRIES.map((country) => (
+                    {activeCountries.map((country) => (
                       <SelectItem key={country.code} value={country.code}>
                         <div className="flex items-center space-x-2">
                           <img 
