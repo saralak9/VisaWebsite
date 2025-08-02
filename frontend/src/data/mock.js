@@ -1,4 +1,4 @@
-// Mock data for Atlys USA Visa Application
+// Mock data for KPVS USA Visa Application
 
 export const mockFAQs = [
   {
