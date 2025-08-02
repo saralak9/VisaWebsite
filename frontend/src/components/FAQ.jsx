@@ -88,53 +88,52 @@ const FAQ = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-4xl font-bold kpvs-text-gray-900 mb-4">
           Frequently Asked Questions
         </h2>
-        <p className="text-xl text-gray-600">
+        <p className="text-xl kpvs-text-gray-700">
           Find answers to common questions about USA visa applications
         </p>
       </div>
 
       {/* Search and Filter */}
-      <Card className="mb-8">
-        <CardContent className="p-6">
+      <div className="mb-8 kpvs-card">
+        <div className="p-6">
           <div className="flex flex-col md:flex-row gap-4">
             {/* Search */}
             <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 kpvs-text-gray-600 h-5 w-5" />
               {searching && (
-                <Loader2 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4 animate-spin" />
+                <Loader2 className="absolute right-3 top-1/2 transform -translate-y-1/2 kpvs-text-gray-600 h-4 w-4 animate-spin" />
               )}
               <Input
                 type="text"
                 placeholder="Search FAQs..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-10 py-3 w-full"
+                className="pl-10 pr-10 py-3 w-full kpvs-focus border-2 kpvs-border-gray-300 rounded-lg transition-colors hover:kpvs-border-blue-light"
               />
             </div>
             
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
-                <Badge
+                <button
                   key={category}
-                  variant={selectedCategory === category ? "default" : "secondary"}
-                  className={`cursor-pointer transition-colors ${
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     selectedCategory === category
-                      ? 'bg-blue-600 hover:bg-blue-700'
-                      : 'hover:bg-gray-200'
+                      ? 'kpvs-bg-blue text-white kpvs-hover-blue'
+                      : 'kpvs-bg-gray-100 kpvs-text-gray-700 hover:kpvs-bg-gray-200'
                   }`}
                   onClick={() => handleCategoryChange(category)}
                 >
                   {category}
-                </Badge>
+                </button>
               ))}
             </div>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       {/* Error Display */}
       {error && (
